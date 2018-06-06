@@ -11,7 +11,9 @@ First, we need to meet some requirements:
 
 After all the libraries and their dependencies are installed, we just need to call the Classifier in our python3 application as the example below:
 
+```
 from Classifier import *
 
 classifier = Classifier(filePath)
 sexualContent = classifier.getScore() >= 0.8
+```
