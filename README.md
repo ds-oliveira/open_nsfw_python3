@@ -1,7 +1,7 @@
 # What is it?
 The project is a python3 library based on the open NSFW developed by yahoo which is a convolutional machine learning model. Using this lib you'll be able to recognize what images have sexual content by a score of 0 to 1.
 
-# How do I use it?
+# How do I run it?
 
 First, we need to meet some requirements:
 - Linux
