@@ -12,8 +12,7 @@ import caffe
 
 class Classifier:
     
-    def __init__(self,filepath):
-        self.filepath = filepath
+    def __init__(self):
         self.model_def = "deploy.prototxt"
         self.pretrained_model = "resnet_50_1by2_nsfw.caffemodel"
         
@@ -55,9 +54,9 @@ class Classifier:
         else:
             return []
 
-    def getScore(self):
+    def getScore(self, filepath):
         
-        with open(self.filepath, 'rb') as f:
+        with open(filepath, 'rb') as f:
             image_data = io.BytesIO(f.read())
 
         # Pre-load caffe model.

@@ -14,6 +14,6 @@ After all the libraries and their dependencies are installed, we just need to ca
 ```
 from Classifier import *
 
-classifier = Classifier(filePath)
-sexualContent = classifier.getScore() >= 0.8
+classifier = Classifier()
+sexualContent = classifier.getScore(filePath) >= 0.8
 ```
