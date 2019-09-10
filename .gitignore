@@ -1,0 +1,4 @@
+dist
+**_pycache_**
+build
+open_nsfw_python3.egg-info
