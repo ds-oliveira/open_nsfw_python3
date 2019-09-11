@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="open-nsfw-python3",
-    version="0.0.2",
+    version="0.0.5",
     author="Danilo Silva de Oliveira",
     author_email="danilooliveira28@hotmail.com",
     description="A useful package to detect sexual content based on yahoo's open_nsfw.",
@@ -17,6 +17,9 @@ setuptools.setup(
         'numpy>=1.16.4',
         'image>=1.5.27',
     ],
+    package_data={
+        'open_nsfw_python3': ['*.caffemodel', '*.prototxt', '*.md'],
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",

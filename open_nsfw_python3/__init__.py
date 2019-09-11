@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 """
 Copyright 2016 Yahoo Inc.
-Licensed under the terms of the 2 clause BSD license. 
+Licensed under the terms of the 2 clause BSD license.
 Please see LICENSE file in the project root for terms.
 """
 
 import numpy as np
 from PIL import Image
+from pkg_resources import resource_filename
 import io
 import caffe
+import os
 
 
 class NSFWClassifier:
@@ -22,8 +24,10 @@ class NSFWClassifier:
         -------
         get_score : returns the sexual content score of a given image.
         """
-        self.model_def = "deploy.prototxt"
-        self.pretrained_model = "resnet_50_1by2_nsfw.caffemodel"
+        self.model_def = resource_filename(
+            'open_nsfw_python3', 'deploy.prototxt')
+        self.pretrained_model = resource_filename(
+            'open_nsfw_python3', 'resnet_50_1by2_nsfw.caffemodel')
 
     def resize_image(self, data, sz=(256, 256)):
 
